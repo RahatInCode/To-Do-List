@@ -1,0 +1,127 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a2e;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .container {
+    text-align: center;
+    background-color: #162447;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  h1 {
+    color: #e94560;
+  }
+  
+  .input-area {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-bottom: 20px;
+  }
+  
+  #taskInput {
+    width: 60%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #e94560;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s;
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+  }
+  
+  #taskList {
+    list-style: none;
+  }
+  
+  .task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0f3460;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    animation: fadeIn 0.5s ease;
+  }
+  
+  .task p {
+    margin: 0;
+    font-size: 1.1em;
+  }
+  
+  .mood-icon {
+    font-size: 1.5em;
+    margin-right: 10px;
+  }
+  
+  button.complete, button.delete, button.edit {
+    padding: 5px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 1em;
+  }
+  
+  button.complete:hover {
+    color: #38b000;
+  }
+  
+  button.delete:hover {
+    color: #e94560;
+  }
+  
+  button.edit:hover {
+    color: #f8ffb6;
+  }
+  
+  .completed p {
+    text-decoration: line-through;
+    color: #dcdcdc;
+  }
+  
+  .completed .mood-icon {
+    display: none;
+  }
+  
+  .completed:after {
+    content: '🚀 Mission Complete!';
+    color: #38b000;
+    font-size: 0.9em;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
